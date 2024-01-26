@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                InstaShop
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="auth/login.html"><i class="fas fa-user"></i> Login</a>
+                <a href="#" id="cart-icon" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="assets/slideshow/SS-Furniture-unsplash.jpg" style="width:100%" alt="Furnitures">
+                <div class="text">Transform Your Home</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="assets/slideshow/SS-Clothes-unsplash.jpg" style="width:100%" alt="Clothes">
+                <div class="text">Next Gen Fashion</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="assets/slideshow/SS-Electronics-unsplash.jpg" style="width:100%" alt="Gadgets">
+                <div class="text">Cool Gadgets</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <section class="shopping-cards">
+            <div class="card" onclick="navigateTo('products-pages/electronics.html')">
+                <img src="assets/cards/C-electronics-unsplash.jpg" alt="Electronics">
+                <h2>Electronics</h2>
+                <p>Explore the latest gadgets and devices.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('products-pages/fashion.html')">
+                <img src="assets/cards/C-fashion-unsplash.jpg" alt="Fashion">
+                <h2>Fashion</h2>
+                <p>Discover the latest fashion trends.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('products-pages/furnitures.html')">
+                <img src="assets/cards/C-furnitures-unsplash.jpg" alt="Furnitures">
+                <h2>Furnitures</h2>
+                <p>Furnish your home with stylish furniture.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('products-pages/cosmetics.html')">
+                <img src="assets/cards/C-cosmetics-unsplash.jpg" alt="Cosmetics">
+                <h2>Cosmetics</h2>
+                <p>Enhance your beauty with our cosmetic products.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Crafting quality experiences and delivering satisfaction, one customer at a time.</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> +123 456 789</span>
+                    <span><i class="fas fa-envelope"></i> nothing@example.com</span>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html" style="color:orange">Home</a></li>
+                    <li><a href="products-pages/electronics.html">Electronics</a></li>
+                    <li><a href="products-pages/fashion.html">Fashion</a></li>
+                    <li><a href="products-pages/furnitures.html">Furniture</a></li>
+                    <li><a href="products-pages/cosmetics.html">Cosmetics</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="#">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+                    <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i> Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 InstaShop | Designed by Amiya Jha
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
